@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinPlus Button</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Imagine if we could write our own fate as easy as we write js with jQuery</h1>
+        <div class="card">
+            <button id="btn1">-</button>
+            <div class="count-container"> 
+                <h2 id="count">0</h2>
+            </div>
+            <button id="btn2">+</button>
+        </div>
+        <h1>Wouldn't it be amazing?</h1>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var count = 0;
+
+            $('#btn1').on('click', function() {
+                if(count > 0)
+                    $('h2').html(--count);
+            });
+
+            $('#btn2').on('click', function() {
+                if(count < 10)
+                    $('h2').html(++count);
+            });
+
+        });
+    </script>
+</body>
+</html>
